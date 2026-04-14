@@ -44,7 +44,7 @@ const Page = () => {
     tl.to(cardRefs[0].current, fade, 0.20); // top-left  — first
     tl.to(cardRefs[2].current, fade, 0.30); // bottom-left — second
     tl.to(cardRefs[1].current, fade, 0.55); // top-right  — third
-    tl.to(cardRefs[3].current, fade, 0.75); // bottom-right — last
+    tl.to(cardRefs[3].current, fade, 0.60); // bottom-right — last
 
   }, { scope: containerRef });
 
@@ -121,7 +121,7 @@ const Page = () => {
               right-4 md:right-[5%] lg:right-[8%]
             "
           >
-            <Card bg="bg-orange-300" text="text-gray-700" value="40" description="Decreased in customer phone calls" />
+            <Card bg="bg-orange-500" text="text-white" value="40" description="Decreased in customer phone calls" />
           </div>
         </div>
       </section>
