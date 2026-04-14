@@ -7,7 +7,6 @@ import { useRef } from 'react';
 import { FaPercent } from 'react-icons/fa';
 
 gsap.registerPlugin(ScrollTrigger);
-
 type CardRef = React.RefObject<HTMLDivElement | null>;
 
 const Page = () => {
