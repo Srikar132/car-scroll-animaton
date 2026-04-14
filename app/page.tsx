@@ -93,7 +93,8 @@ const Page = () => {
               height={200}
               priority
               quality={75}
-              className="h-full w-auto object-contain -translate-x-5 lg:-translate-x-20"
+              draggable={false}
+              className="h-full select-none w-auto object-contain -translate-x-5 lg:-translate-x-20"
             />
           </div>
         </div>
