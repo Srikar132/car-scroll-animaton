@@ -51,7 +51,8 @@
   --foreground:          oklch(0.118 0 0);       /* #0f0f0f — main canvas */
   --background:          oklch(0.918 0 0);        /* #e8eaed — primary text */
 
-  
+  --radius : 0.64rem;
+
 }
 
 @layer base {

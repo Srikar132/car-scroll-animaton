@@ -28,7 +28,7 @@ const Page = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
-        end: "+=500vh",
+        end: "+=700vh",
         scrub: 1.5,
         pin: true,
         invalidateOnRefresh: false,
@@ -39,9 +39,9 @@ const Page = () => {
     // Car slides out across full timeline
     tl.to(carContainerRef.current, { x: "100%", ease: "power1.inOut", duration: 1 }, 0);
 
-    const fade = { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" };
+    const fade = { opacity: 1, duration: 0.4, ease: "power2.out" };
 
-    tl.to(cardRefs[0].current, fade, 0.10); // top-left  — first
+    tl.to(cardRefs[0].current, fade, 0.20); // top-left  — first
     tl.to(cardRefs[2].current, fade, 0.30); // bottom-left — second
     tl.to(cardRefs[1].current, fade, 0.55); // top-right  — third
     tl.to(cardRefs[3].current, fade, 0.75); // bottom-right — last
@@ -63,7 +63,7 @@ const Page = () => {
               absolute z-10
               top-1/2 -translate-y-1/2
               opacity-0
-              right-[calc(50%-112px)] md:right-[calc(25%+140px)] lg:right-[calc(20%+150px)]
+              right-[calc(50%-112px)] md:right-[calc(25%+140px)] lg:right-[calc(20%+150px)] 
             "
           >
             <Card bg="bg-yellow-300" value="58" description="Increase in pick up point use" />
@@ -91,6 +91,8 @@ const Page = () => {
               alt="Car"
               width={400}
               height={200}
+              priority
+              quality={100}
               className="h-full w-auto object-contain -translate-x-5 lg:-translate-x-20"
             />
           </div>
@@ -102,7 +104,7 @@ const Page = () => {
             ref={cardRefs[2]}
             className="
               absolute z-10
-              top-1/4 -translate-y-1/2
+              top-1/2 -translate-y-1/2
               opacity-0
               right-[calc(50%-112px)] md:right-[calc(25%+140px)] lg:right-[calc(20%+150px)]
             "
@@ -114,7 +116,7 @@ const Page = () => {
             ref={cardRefs[3]}
             className="
               absolute z-20
-              top-1/4 -translate-y-1/2
+              top-1/2 -translate-y-1/2
               opacity-0
               right-4 md:right-[5%] lg:right-[8%]
             "
