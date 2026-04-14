@@ -92,7 +92,7 @@ const Page = () => {
               width={400}
               height={200}
               priority
-              quality={100}
+              quality={75}
               className="h-full w-auto object-contain -translate-x-5 lg:-translate-x-20"
             />
           </div>
@@ -141,7 +141,7 @@ const Card = ({
   description: string;
 }) => {
   return (
-    <div className={`${bg} ${text} p-5 rounded-xl flex flex-col justify-center shadow-lg w-52 md:w-60`}>
+    <div className={`${bg} ${text} p-5 rounded-xl flex flex-col justify-center shadow-lg min-w-52 md:min-w-60`}>
       <h1 className="text-6xl md:text-7xl font-bold flex items-end gap-1 leading-none">
         {value}<FaPercent size={36} className="mb-1" />
       </h1>
